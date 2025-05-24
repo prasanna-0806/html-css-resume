@@ -1,0 +1,282 @@
+
+.navbar {
+  font-family: "Chivo", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  background-color: #1b2735;  /* Midnight Blue */
+  color: #e0f7fa;
+}
+.navbar-section {
+  position: sticky;
+  top: 0;
+  z-index: 1000; /* So it stays above other content */
+}
+
+.navbar a {
+  color: #e0f7fa;
+  margin: 0 1rem;
+  /* transition: color 0.3s ease; */
+}
+.navbar a:hover,
+.navbar a.active {
+  color: #00ffe7;             /* Soft Cyan highlight */
+}
+.container h1 {
+    color: #e0f7fa;
+    font-family: "Chivo", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+.container h2 {
+    color: #e0f7fa;
+     font-family: "Lora", serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.hero {
+  min-height: 75vh;
+  background: linear-gradient(to bottom, #0b0b2b, #1b2735 70%, #090a0f);
+  overflow: hidden;
+  position: relative; /* Add this line */
+  z-index: 0;
+
+}
+
+.stars {
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  background: white;
+  box-shadow: 2vw 5vh 2px white, 10vw 8vh 2px white, 15vw 15vh 1px white,
+    22vw 22vh 1px white, 28vw 12vh 2px white, 32vw 32vh 1px white,
+    38vw 18vh 2px white, 42vw 35vh 1px white, 48vw 25vh 2px white,
+    53vw 42vh 1px white, 58vw 15vh 2px white, 63vw 38vh 1px white,
+    68vw 28vh 2px white, 73vw 45vh 1px white, 78vw 32vh 2px white,
+    83vw 48vh 1px white, 88vw 20vh 2px white, 93vw 52vh 1px white,
+    98vw 35vh 2px white, 5vw 60vh 1px white, 12vw 65vh 2px white,
+    18vw 72vh 1px white, 25vw 78vh 2px white, 30vw 85vh 1px white,
+    35vw 68vh 2px white, 40vw 82vh 1px white, 45vw 92vh 2px white,
+    50vw 75vh 1px white, 55vw 88vh 2px white, 60vw 95vh 1px white,
+    65vw 72vh 2px white, 70vw 85vh 1px white, 75vw 78vh 2px white,
+    80vw 92vh 1px white, 85vw 82vh 2px white, 90vw 88vh 1px white,
+    95vw 75vh 2px white;
+  animation: twinkle 8s infinite linear;
+}
+
+.shooting-star {
+  position: absolute;
+  width: 100px;
+  height: 2px;
+  background: linear-gradient(90deg, white, transparent);
+  animation: shoot 3s infinite ease-in;
+}
+.stars, .shooting-star {
+  position: absolute;
+  z-index: 1; /* behind content but above background */
+}
+
+.container {
+  position: relative;
+  z-index: 2; /* above stars */
+}
+.shooting-star:nth-child(1) {
+  top: 20%;
+  left: -100px;
+  animation-delay: 0s;
+}
+
+.shooting-star:nth-child(2) {
+  top: 35%;
+  left: -100px;
+  animation-delay: 1s;
+}
+
+.shooting-star:nth-child(3) {
+  top: 50%;
+  left: -100px;
+  animation-delay: 2s;
+}
+
+@keyframes twinkle {
+  0%,
+  100% {
+    opacity: 0.8;
+  }
+  50% {
+    opacity: 0.4;
+  }
+}
+
+@keyframes shoot {
+  0% {
+    transform: translateX(0) translateY(0) rotate(25deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(120vw) translateY(50vh) rotate(25deg);
+    opacity: 0;
+  }
+}
+
+/* Additional twinkling stars with different animation timing */
+.stars::after {
+  content: "";
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  background: white;
+  box-shadow: 8vw 12vh 2px white, 16vw 18vh 1px white, 24vw 25vh 2px white,
+    33vw 15vh 1px white, 41vw 28vh 2px white, 49vw 35vh 1px white,
+2px white, 97vw 45vh 1px white,
+    3vw 68vh 2px white, 11vw 75vh 1px white, 19vw 82vh 2px white,
+    27vw 88vh 1px white, 35vw 72vh 2px white, 43vw 85vh 1px white,
+    51vw 92vh 2px white, 59vw 78vh 1px white;
+  animation: twinkle 6s infinite linear reverse;
+}
+    /* 57vw 22vh 2px white, 65vw 42vh 1px white, 73vw 28vh 2px white,
+    81vw 48vh 1px white, 89vw 32vh  */
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  padding: 4rem 2rem;
+  background-color: #1e2a38;
+  color: #f0f4f8;
+  text-align: center;
+}
+
+.item1 h2 {
+  font-size: 2.5rem;
+  color: #a7c0dc;
+  margin-bottom: 1rem;
+}
+
+.item2 {
+  text-align: left;
+  /* max-width: 500px;   */
+  background-color: #a7c0dc; /* a lighter soft background to differentiate the box */
+  padding: 1.5rem 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(11, 11, 43, 0.15); /* subtle shadow */
+  color: rgb(12, 46, 61);
+  line-height: 1.6;
+  margin: 0 auto; /* center it horizontally in the right column */
+}
+
+
+.item2 {
+  font-family: "Lora", serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+.about {
+  font-family: "Chivo", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+
+}
+.project-container {
+  /* font-family: "Chivo", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal; */
+  background-color: #306496;
+}
+.project-container>h2 {
+    font-family: "Chivo", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    color: aliceblue;
+    text-align: center;
+    padding-top: 2rem;
+}
+.card-body {
+    background-color: #203b59;
+}
+.card-title {
+    font-family: "Chivo", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+  color: aliceblue;
+}
+.card-text {
+    font-family: "Lora", serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  color: #ffffff;
+}
+.card-body> a {
+    background-color: #1b2735; /* Soft Cyan for links */
+    border-color:  #1b2735;
+    font-weight: bold;
+}
+.skill-container {
+    background-color: #1b2735;
+    padding: 2rem;
+    color: #e0f7fa;
+}
+.skill-container>h2 {
+    font-family: "Chivo", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+.skill-box {
+    background-color: #355f90; /* Soft Cyan for skill boxes */
+    padding: 1rem;
+    border-radius: 8px;
+    margin: 0.5rem;
+    text-align: center;
+    color: #e0f7fa;
+}
+.contact-container {
+    background-color: #456589;
+    padding: 2rem;
+    color: #e0f7fa;
+}
+.contact-container> h2,h3 {
+    font-family: "Chivo", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+    color: aliceblue;
+    text-align: center;
+}
+.contact-container>p {
+    font-family: "Lora", serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+.footer-container {
+    background-color: #1b2735;
+    color: #e0f7fa;
+    padding: 1rem;
+    text-align: center;
+}
+.footer-container>p {
+    font-family: "Lora", serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+    margin: 0;
+}

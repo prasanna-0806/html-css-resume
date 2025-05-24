@@ -1,0 +1,52 @@
+
+
+color palette-
+primary 213448
+secondary 547792
+then 94B4C1
+and ECEFCAnavbar with these-
+1. hero section- bg(?) my name. a line about me, know more
+2. about me- picture, about me few lines, funfacts
+3. projects
+4. skills
+5. resume (resume) website
+6. contact me
+7. footer
+
+website colors-
+navbar- 
+* Background: `#213448`
+* Text/Links: White or `#ECEFCA`
+* Hover: `#94B4C1` underline or color shift
+
+buttons-
+* Background: `#547792`
+* Text: White
+* Hover: Darker tone of `#547792` or use `#213448`
+
+section bgs-
+* Use `#ECEFCA` as your main background
+* Alternate sections with `#94B4C1` very lightly or just use card-style containers with white
+
+text-
+* Main headings: `#213448` or `#547792`
+* Body text: Almost black (`#212529`) or `#213448`
+
+font-
+https://www.fontpair.co/pairings/chivo-general-serif
+https://www.fontpair.co/pairings/chivo-lora  -- good!
+https://www.fontpair.co/pairings/chivo-tinos
+https://www.fontpair.co/pairings/david-libre-chivo
+
+font usage-
+Chivo (Sans-serif)– Use for:
+* **Headings (h1–h4)** — clean, bold, and readable
+* **Navbar links**
+* **Buttons**
+
+Lora (Serif)– Use for:
+* **Body text / paragraphs**
+* **"About Me" section**
+* **Project descriptions**
+* **Footer text**
+
